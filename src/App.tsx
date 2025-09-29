@@ -1,6 +1,8 @@
 import { useState } from 'react'
 import './App.css'
 import { generateMnemonic } from 'bip39'
+import { SolanaWallet } from './components/SolanaWallet'
+import { EthWallet } from './components/EthWallet'
 
 function App() {
 
@@ -15,6 +17,9 @@ function App() {
     <>
     <button className='' onClick={generate}>Click to generate Mnemonic &nbsp;</button>
     {mnemonic}
+    <br />
+    <SolanaWallet mnemonic={mnemonic}></SolanaWallet>
+    <EthWallet mnemonic={mnemonic}></EthWallet>
     </>
   )
 }
